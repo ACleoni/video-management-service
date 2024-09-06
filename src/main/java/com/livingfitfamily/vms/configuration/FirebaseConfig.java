@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Configuration;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 
 @Configuration
 public class FirebaseConfig {
@@ -19,14 +18,20 @@ public class FirebaseConfig {
     private String serviceAccountKey;
 
     @Bean
-    FirebaseApp initializeFirebase() throws IOException {
+    FirebaseApp initialize() throws IOException {
         // Use a service account
-        InputStream serviceAccount = new FileInputStream(serviceAccountKey);
+        FileInputStream serviceAccount = new FileInputStream(serviceAccountKey);
 
-        GoogleCredentials credentials = GoogleCredentials.fromStream(serviceAccount);
         FirebaseOptions options = new FirebaseOptions.Builder()
-                .setCredentials(credentials)
+                .setCredentials(GoogleCredentials.fromStream(serviceAccount))
+                .setDatabaseUrl("https://living-fit-family-32db6-default-rtdb.firebaseio.com")
                 .build();
+
         return FirebaseApp.initializeApp(options);
     }
+
+//    @Bean
+//    public Firestore getFirestore() {
+//        return FirestoreClient.getFirestore();
+//    }
 }
