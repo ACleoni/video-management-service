@@ -1,4 +1,4 @@
-package com.livingfitfamily.video_management_service.controller;
+package com.livingfitfamily.vms.controller;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

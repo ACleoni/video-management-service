@@ -1,4 +1,4 @@
-package com.livingfitfamily.video_management_service;
+package com.livingfitfamily.vms;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

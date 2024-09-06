@@ -1,4 +1,4 @@
-package com.livingfitfamily.video_management_service;
+package com.livingfitfamily.vms;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
