@@ -1,4 +1,4 @@
-package com.livingfitfamily.vms.request;
+package com.livingfitfamily.vms.model;
 
 import org.springframework.web.multipart.MultipartFile;
 
@@ -13,7 +13,7 @@ import lombok.Builder;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class UploadRequest {
+public class VideoModel {
     private String name;
     private String category;
     private String sets;
